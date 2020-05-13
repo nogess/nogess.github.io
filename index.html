@@ -152,6 +152,105 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-使用ssh连接到github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/14/%E4%BD%BF%E7%94%A8ssh%E8%BF%9E%E6%8E%A5%E5%88%B0github/">使用ssh连接到github</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/14/%E4%BD%BF%E7%94%A8ssh%E8%BF%9E%E6%8E%A5%E5%88%B0github/" class="archive-article-date">
+  	<time datetime="2020-05-13T16:28:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="生成一个新的SSH-key"><a href="#生成一个新的SSH-key" class="headerlink" title="生成一个新的SSH key"></a>生成一个新的SSH key</h4><ol>
+<li>打开Git Bash，输入以下命令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
+
+<p>此处需要你填写的邮箱，只是作为SSH key的一个名字，实质上没有任何作用。</p>
+<ol start="2">
+<li>命令行提示你输入SSH key文件地址：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter a file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]</span><br></pre></td></tr></table></figure>
+
+<p>直接回车确认即可。</p>
+<ol start="3">
+<li>命令行提示你输入密码：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase): [Type a passphrase]</span><br><span class="line">Enter same passphrase again: [Type passphrase again]</span><br></pre></td></tr></table></figure>
+
+<p>此处的密码意味着以后需要使用此SSH key时，你都必须输入密码来使用，因此一般不设置，直接回车即可。</p>
+<h4 id="将SSH-key添加进ssh-agent"><a href="#将SSH-key添加进ssh-agent" class="headerlink" title="将SSH key添加进ssh-agent"></a>将SSH key添加进ssh-agent</h4><p>ssh-agent 是用于管理SSH 私钥的长时间持续运行的守护进程（daemon）. 唯一目的就是对解密的私钥进行高速缓存。</p>
+<ol>
+<li>首先确保ssh-agent已经启动</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span> $(ssh-agent -s)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>添加SSH key</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+
+<h4 id="将SSH-公钥添加进Github"><a href="#将SSH-公钥添加进Github" class="headerlink" title="将SSH 公钥添加进Github"></a>将SSH 公钥添加进Github</h4><ol>
+<li>拷贝公钥</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br><span class="line">pbcopy &lt; ~/.ssh/id_rsa.pub //mac下拷贝</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>登陆Github，进入Settings, 选择SSH and GPG keys，选择New SSH key or Add SSH key，然后将公钥复制到输入框中，并命名为电脑的主机名。至此，ssh设置就成功了。</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/14/%E4%BD%BF%E7%94%A8ssh%E8%BF%9E%E6%8E%A5%E5%88%B0github/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
