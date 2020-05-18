@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Mac安装homebrew | 你想来点兔子吗</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Mac安装 homebrew-cak 配置mac终端走代理 1export all_proxy&#x3D;socks5:&#x2F;&#x2F;127.0.0.1:1086 &#x2F;&#x2F; 地址需对应ssr   安装homebrew1&#x2F;usr&#x2F;bin&#x2F;ruby -e “$(curl -fsSL https:&#x2F;&#x2F;raw.githubuser">
+  <meta name="description" content="配置mac终端走代理  1export all_proxy&#x3D;socks5:&#x2F;&#x2F;127.0.0.1:1086 &#x2F;&#x2F; 地址需对应ssr     安装homebrew  1&#x2F;usr&#x2F;bin&#x2F;ruby -e “$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)”     安装homebrew-ca">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac安装homebrew">
 <meta property="og:url" content="http://yoursite.com/2020/05/19/Mac%E5%AE%89%E8%A3%85homebrew/index.html">
 <meta property="og:site_name" content="你想来点兔子吗">
-<meta property="og:description" content="Mac安装 homebrew-cak 配置mac终端走代理 1export all_proxy&#x3D;socks5:&#x2F;&#x2F;127.0.0.1:1086 &#x2F;&#x2F; 地址需对应ssr   安装homebrew1&#x2F;usr&#x2F;bin&#x2F;ruby -e “$(curl -fsSL https:&#x2F;&#x2F;raw.githubuser">
+<meta property="og:description" content="配置mac终端走代理  1export all_proxy&#x3D;socks5:&#x2F;&#x2F;127.0.0.1:1086 &#x2F;&#x2F; 地址需对应ssr     安装homebrew  1&#x2F;usr&#x2F;bin&#x2F;ruby -e “$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)”     安装homebrew-ca">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-18T17:15:02.000Z">
-<meta property="article:modified_time" content="2020-05-18T17:17:51.635Z">
+<meta property="article:modified_time" content="2020-05-18T17:25:45.178Z">
 <meta property="article:author" content="nogess">
 <meta name="twitter:card" content="summary">
   
@@ -164,19 +164,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Mac安装-homebrew-cak"><a href="#Mac安装-homebrew-cak" class="headerlink" title="Mac安装 homebrew-cak"></a>Mac安装 homebrew-cak</h2><ol>
-<li><p>配置mac终端走代理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export all_proxy&#x3D;socks5:&#x2F;&#x2F;127.0.0.1:1086 &#x2F;&#x2F; 地址需对应ssr</span><br></pre></td></tr></table></figure>
+        <ol>
+<li>配置mac终端走代理</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> all_proxy=socks5://127.0.0.1:1086 // 地址需对应ssr</span><br></pre></td></tr></table></figure>
+
+
 
 <ol start="2">
-<li>安装<code>homebrew</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby -e “$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)”</span><br></pre></td></tr></table></figure>
-</li>
+<li>安装<code>homebrew</code></li>
 </ol>
-</li>
-<li><p>安装<code>homebrew-cask</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install brew-cask-completion</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>安装<code>homebrew-cask</code></li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install brew-cask-completion</span><br></pre></td></tr></table></figure>
+
 
       
 

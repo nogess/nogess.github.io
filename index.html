@@ -162,19 +162,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Mac安装-homebrew-cak"><a href="#Mac安装-homebrew-cak" class="headerlink" title="Mac安装 homebrew-cak"></a>Mac安装 homebrew-cak</h2><ol>
-<li><p>配置mac终端走代理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export all_proxy&#x3D;socks5:&#x2F;&#x2F;127.0.0.1:1086 &#x2F;&#x2F; 地址需对应ssr</span><br></pre></td></tr></table></figure>
+        <ol>
+<li>配置mac终端走代理</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> all_proxy=socks5://127.0.0.1:1086 // 地址需对应ssr</span><br></pre></td></tr></table></figure>
+
+
 
 <ol start="2">
-<li>安装<code>homebrew</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby -e “$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)”</span><br></pre></td></tr></table></figure>
-</li>
+<li>安装<code>homebrew</code></li>
 </ol>
-</li>
-<li><p>安装<code>homebrew-cask</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install brew-cask-completion</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>安装<code>homebrew-cask</code></li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install brew-cask-completion</span><br></pre></td></tr></table></figure>
+
 
       
 
