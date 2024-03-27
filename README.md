@@ -1,3 +1,3 @@
 ### nogess
 ---
-- Homepage: [blog](nogess.github.io)
+- [Homepage](https://nogess.github.io)
