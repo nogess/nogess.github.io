@@ -1,3 +1,3 @@
 ### nogess
 ---
-- [Homepage](https://nogess.github.io)
+- blog by hexo
